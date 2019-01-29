@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AssigmetIntent</string>
+    <string name="file_provider_authority" translatable="false">com.workfort.aps.assigmetintent.fileprovider</string>
+
+    <string name="description_bg">background</string>
+    <string name="description_ic_camera">Camera Icon</string>
+    <string name="hint_name">Enter Full Name</string>
+    <string name="hint_email">Enter Email</string>
+    <string name="hint_age">Enter age</string>
+    <string name="hint_phone">Enter Phone Number</string>
+    <string name="label_registration">Register</string>
+    <string name="name_required_exception">Name required</string>
+    <string name="email_required_exception">Email Required</string>
+    <string name="age_required_exception">Age Required</string>
+    <string name="phone_required_exception">Phone Number Required</string>
+    <string name="image_required_exception">Pick Your Image First</string>
+    <string name="label_name">Name</string>
+    <string name="label_email">Email</string>
+    <string name="label_age">Age</string>
+    <string name="label_phone">Phone Number</string>
+    <string name="user_required_exception">No User found</string>
+</resources>

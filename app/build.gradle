@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion target_sdk
+    defaultConfig {
+        applicationId "com.workfort.aps.assigmetintent"
+        minSdkVersion min_sdk
+        targetSdkVersion target_sdk
+        versionCode version_code
+        versionName version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraint"
+    //instead of support v4
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.support"
+    //instead of support design
+    implementation "com.google.android.material:material:$rootProject.material"
+
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // reading and writing Exif tags in a JPEG file or a RAW image file
+    implementation "androidx.exifinterface:exifinterface:$rootProject.exifinterface"
+}
+
+//3rd party
+dependencies {
+    // circle image
+    implementation "com.mikhaellopez:circularimageview:$rootProject.circularimageview"
+
+    //image loader
+    implementation "com.github.bumptech.glide:glide:$rootProject.glide"
+
+    //logger
+    implementation "com.jakewharton.timber:timber:$rootProject.timber"
+}
+
+//testing libs
+dependencies {
+    testImplementation "junit:junit:$rootProject.junit"
+    androidTestImplementation "androidx.test:runner:$rootProject.runner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
+}
